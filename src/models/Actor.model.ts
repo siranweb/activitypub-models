@@ -1,5 +1,5 @@
-import {ModelBaseAP} from "./Base.model";
-import {ObjectAPFields} from "./Object.model";
+import {ASBase} from "./ASBase.model";
+import {ASObjectFields} from "./ASObject.model";
 
 export enum ActorTypes {
     Application = 'Application',
@@ -11,17 +11,12 @@ export enum ActorTypes {
 
 // TODO: types
 // https://www.w3.org/TR/activitystreams-core/#actors
-export interface ActorAPFields extends ObjectAPFields {
+export interface ActorFields extends ASObjectFields {
     type?: any | ActorTypes; // ?
-    actor?: any; // Actor?
-    target?: any;
-    origin?: any;
-    result?: any;
-    instrument?: any;
 }
 
-export class ActorAP extends ModelBaseAP<ActorAPFields>{
-    constructor(fields: ActorAPFields) {
+export class Actor extends ASBase<ActorFields>{
+    constructor(fields: ActorFields) {
         super(fields);
     }
 }

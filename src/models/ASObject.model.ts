@@ -1,8 +1,8 @@
-import {ModelBaseAP} from "./Base.model";
+import {ASBase} from "./ASBase.model";
 
 // TODO: types
 // https://www.w3.org/TR/activitystreams-core/#object
-export interface ObjectAPFields {
+export interface ASObjectFields {
     id?: any;
     type?: any;
     attachment?: any;
@@ -32,8 +32,8 @@ export interface ObjectAPFields {
     duration?: any;
 }
 
-export class ObjectAP extends ModelBaseAP<ObjectAPFields>{
-    constructor(fields: ObjectAPFields) {
+export class ASObject extends ASBase<ASObjectFields>{
+    constructor(fields: ASObjectFields) {
         super(fields);
     }
 }

@@ -1,14 +1,14 @@
-import {ModelBaseAP} from "./Base.model";
-import {IntransitiveActivityAPFields} from "./IntransitiveActivity.model";
+import {ASBase} from "./ASBase.model";
+import {IntransitiveActivityFields} from "./IntransitiveActivity.model";
 
 // TODO: types
 // https://www.w3.org/TR/activitystreams-core/#activities
-export interface ActivityAPFields extends IntransitiveActivityAPFields {
+export interface ActivityFields extends IntransitiveActivityFields {
     object?: any; // Object?
 }
 
-export class ActivityAP extends ModelBaseAP<ActivityAPFields>{
-    constructor(fields: ActivityAPFields) {
+export class Activity extends ASBase<ActivityFields>{
+    constructor(fields: ActivityFields) {
         super(fields);
     }
 }

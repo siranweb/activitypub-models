@@ -1,9 +1,9 @@
-import { ObjectAP } from './models/Object.model';
+import { ASObject } from './models/ASObject.model';
 
-const obj = new ObjectAP({
+const obj = new ASObject({
     id: 'someId',
 });
-const obj2 = new ObjectAP({
+const obj2 = new ASObject({
     cc: '123',
     content: obj,
 }).addContext();

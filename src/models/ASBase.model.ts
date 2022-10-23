@@ -1,11 +1,12 @@
 // TODO: types
+// TODO: renaming/refactor
 export type Context = string | any[];
 
 export interface ModelBaseAPWithContext {
     '@context'?: Context;
 }
 
-export class ModelBaseAP<T> {
+export class ASBase<T> {
     public fields: T & ModelBaseAPWithContext;
 
     constructor(fields: T) {
@@ -27,7 +28,7 @@ export class ModelBaseAP<T> {
     public plain(): Record<string, any> {
         const result = {} as Record<string, any>;
         for (const [key, node] of Object.entries(this.fields)) {
-            if (node instanceof ModelBaseAP) {
+            if (node instanceof ASBase) {
                 result[key] = node.plain();
             } else {
                 result[key] = node;

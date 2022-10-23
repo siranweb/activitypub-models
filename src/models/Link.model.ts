@@ -1,8 +1,8 @@
-import {ModelBaseAP} from "./Base.model";
+import {ASBase} from "./ASBase.model";
 
 // TODO: types
 // https://www.w3.org/TR/activitystreams-core/#dfn-link
-export interface ObjectAPFields {
+export interface LinkFields {
     id?: any;
     name?: any;
     hreflang?: any;
@@ -12,8 +12,8 @@ export interface ObjectAPFields {
     width?: any;
 }
 
-export class LinkAP extends ModelBaseAP<ObjectAPFields>{
-    constructor(fields: ObjectAPFields) {
+export class Link extends ASBase<LinkFields>{
+    constructor(fields: LinkFields) {
         super(fields);
     }
 }
