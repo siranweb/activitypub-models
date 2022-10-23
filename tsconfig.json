@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "watch": true,
     "outDir": "./dist",
     "declaration": true,
     "target": "es2016",
