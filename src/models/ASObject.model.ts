@@ -3,7 +3,9 @@ import {ASBase} from "./ASBase.model";
 // TODO: types
 // https://www.w3.org/TR/activitystreams-core/#object
 export interface ASObjectFields {
+    /** @remarks Example remark for id */
     id?: any;
+
     type?: any;
     attachment?: any;
     attributedTo?: any;
