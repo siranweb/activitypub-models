@@ -253,9 +253,9 @@ export interface ASObjectFields {
     /**
      * The date and time at which the object was updated.
      *
-     * {@link https://www.w3.org/ns/activitystreams#published Docs}
-     *
      * Must be provided in {@link https://www.w3schools.blog/xsd-date-and-time-data-types xsd:dateTime}
+     *
+     * {@link https://www.w3.org/ns/activitystreams#published Docs}
      *
      * @example
      * 2020-08-08T08:30:11-03:00Z
