@@ -1,4 +1,4 @@
-import { ASObject, ASObjectFields } from "./ASObject.model";
+import { ASObject, ASObjectFields } from "./asObject/ASObject.model";
 
 // TODO: types
 // https://www.w3.org/TR/activitystreams-core/#collection

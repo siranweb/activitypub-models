@@ -1,0 +1,34 @@
+import { Link } from "../models/Link.model";
+import {ASObject} from "../models/asObject/ASObject.model";
+
+// TODO: implement
+export type Image = 'placeholder';
+export type Article = 'placeholder';
+export type Audio = 'placeholder';
+export type Document = 'placeholder';
+export type Event = 'placeholder';
+export type Note = 'placeholder';
+export type Page = 'placeholder';
+export type Place = 'placeholder';
+export type Profile = 'placeholder';
+export type Relationship = 'placeholder';
+export type Tombstone = 'placeholder';
+export type Video = 'placeholder';
+export type Mention = 'placeholder';
+export type AnyASObject = ASObject | Article | Audio | Document | Event | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video;
+export type DateTime = string;
+export type Duration = string;
+export type UrlField = string | Link;
+export type IconField = string | Image | Link;
+export type ImageField = string | Image | Link;
+export type AttachmentField = string | AnyASObject | Link;
+export type AudienceField = string | AnyASObject | Link;
+export type InReplyToField = string | AnyASObject | Link;
+export type LocationField = string | AnyASObject | Link;
+export type PreviewField = string | AnyASObject | Link;
+export type ToField = string | AnyASObject | Link;
+export type BtoField = string | AnyASObject | Link;
+export type CcField = string | AnyASObject | Link;
+export type BccField = string | AnyASObject | Link;
+export type AttributedToField = string | AnyASObject | Link | Mention;
+export type TagField = string | AnyASObject | Link | Mention;

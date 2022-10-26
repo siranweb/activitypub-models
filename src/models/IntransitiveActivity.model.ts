@@ -1,5 +1,5 @@
 import {ASBase} from "./ASBase.model";
-import {ASObjectFields} from "./ASObject.model";
+import {ASObjectFields} from "./asObject/ASObject.model";
 
 // TODO: types
 // https://www.w3.org/TR/activitystreams-core/#intransitiveactivities

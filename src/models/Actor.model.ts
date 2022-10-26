@@ -1,5 +1,5 @@
 import {ASBase} from "./ASBase.model";
-import {ASObjectFields} from "./ASObject.model";
+import {ASObjectFields} from "./asObject/ASObject.model";
 
 export enum ActorTypes {
     Application = 'Application',
