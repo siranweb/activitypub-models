@@ -3,7 +3,7 @@ import {IntransitiveActivityFields} from './IntransitiveActivity.types';
 import {ModelType} from "../../common/common.types";
 
 /**
- * Instances of IntransitiveActivity are a subtype of
+ * Instances of intransitiveActivity are a subtype of
  * Activity representing intransitive actions. The
  * object property is therefore inappropriate for these activities.
  *
