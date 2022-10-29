@@ -8,4 +8,4 @@ ActivityPub JS/TS models with official docs. Still in development, not ready for
  - [ ] Publish as NPM package
 
 ## We need help!
-We have a lot of plans for future. Any help will be appreciated. You can contact me via matrix (@siranweb:matrix.org) or [telegram](https://t.me/KirillG_web) 
+We have a lot of plans for future. Any help will be appreciated. You can contact me via [matrix](https://matrix.to/#/@siranweb:matrix.org) or [telegram](https://t.me/KirillG_web) 
