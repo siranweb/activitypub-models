@@ -9,6 +9,9 @@ import {ApplicationFields} from "./Application.types";
  */
 export class Application extends ASBase<ApplicationFields>{
     constructor(fields: ApplicationFields) {
-        super(ASModelType.Application, fields);
+        super({
+            type: ASModelType.Application,
+            ...fields
+        })
     }
 }

@@ -9,6 +9,9 @@ import {DocumentFields} from "./Document.types";
  */
 export class Document extends ASBase<DocumentFields>{
     constructor(fields: DocumentFields) {
-        super(ASModelType.Document, fields);
+        super({
+            type: ASModelType.Document,
+            ...fields
+        })
     }
 }

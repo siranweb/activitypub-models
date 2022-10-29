@@ -9,6 +9,9 @@ import {GroupFields} from "./Group.types";
  */
 export class Group extends ASBase<GroupFields>{
     constructor(fields: GroupFields) {
-        super(ASModelType.Group, fields);
+        super({
+            type: ASModelType.Group,
+            ...fields
+        })
     }
 }

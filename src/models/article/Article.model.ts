@@ -9,6 +9,9 @@ import {ArticleFields} from "./Article.types";
  */
 export class Article extends ASBase<ArticleFields>{
     constructor(fields: ArticleFields) {
-        super(ASModelType.Article, fields);
+        super({
+            type: ASModelType.Article,
+            ...fields
+        })
     }
 }

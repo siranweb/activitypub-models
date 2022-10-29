@@ -9,6 +9,9 @@ import {ASEventFields} from "./ASEvent.types";
  */
 export class ASEvent extends ASBase<ASEventFields>{
     constructor(fields: ASEventFields) {
-        super(ASModelType.Event, fields);
+        super({
+            type: ASModelType.Event,
+            ...fields
+        })
     }
 }

@@ -12,6 +12,9 @@ import {ASModelType} from "../../common/common.types";
  */
 export class Activity extends ASBase<ActivityFields>{
     constructor(fields: ActivityFields) {
-        super(ASModelType.Activity, fields);
+        super({
+            type: ASModelType.Activity,
+            ...fields
+        })
     }
 }

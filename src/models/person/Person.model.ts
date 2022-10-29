@@ -9,6 +9,9 @@ import {PersonFields} from "./Person.types";
  */
 export class Person extends ASBase<PersonFields>{
     constructor(fields: PersonFields) {
-        super(ASModelType.Person, fields);
+        super({
+            type: ASModelType.Person,
+            ...fields
+        })
     }
 }

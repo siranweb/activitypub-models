@@ -1,6 +1,3 @@
-import {Link} from "../Link.model";
-import {Collection} from "../Collection.model";
-import { ASObject } from "./ASObject.model";
 import {
     DateTime,
     Duration,
@@ -18,10 +15,10 @@ import {
     BccValue,
     AttributedToValue,
     TagValue,
+    GeneratorValue,
+    Collection,
 } from "../../common/common.types";
 
-// TODO: types
-// https://www.w3.org/TR/activitystreams-core/#object
 export interface ASObjectFields {
     /**
      * Provides the globally unique identifier for
@@ -158,7 +155,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#generator Docs}
      */
-    generator?: (string | ASObject | Link);
+    generator?: GeneratorValue;
 
     /**
      * Indicates an entity (or entities) that describes an icon for this object.

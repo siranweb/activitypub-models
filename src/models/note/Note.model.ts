@@ -9,6 +9,9 @@ import {NoteFields} from "./Note.types";
  */
 export class Note extends ASBase<NoteFields>{
     constructor(fields: NoteFields) {
-        super(ASModelType.Note, fields);
+        super({
+            type: ASModelType.Note,
+            ...fields
+        })
     }
 }

@@ -9,6 +9,9 @@ import {OrganizationFields} from "./Organization.types";
  */
 export class Organization extends ASBase<OrganizationFields>{
     constructor(fields: OrganizationFields) {
-        super(ASModelType.Organization, fields);
+        super({
+            type: ASModelType.Organization,
+            ...fields
+        })
     }
 }

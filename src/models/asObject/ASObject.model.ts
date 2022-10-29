@@ -11,6 +11,9 @@ import {ASModelType} from "../../common/common.types";
  */
 export class ASObject extends ASBase<ASObjectFields>{
     constructor(fields: ASObjectFields) {
-        super(ASModelType.Object, fields);
+        super({
+            type: ASModelType.Object,
+            ...fields
+        })
     }
 }

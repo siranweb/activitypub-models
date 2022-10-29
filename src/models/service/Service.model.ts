@@ -9,6 +9,9 @@ import {ServiceFields} from "./Service.types";
  */
 export class Service extends ASBase<ServiceFields>{
     constructor(fields: ServiceFields) {
-        super(ASModelType.Article, fields);
+        super({
+            type: ASModelType.Service,
+            ...fields
+        })
     }
 }
