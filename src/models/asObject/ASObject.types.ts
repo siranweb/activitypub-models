@@ -4,20 +4,20 @@ import { ASObject } from "./ASObject.model";
 import {
     DateTime,
     Duration,
-    UrlField,
-    IconField,
-    ImageField,
-    AttachmentField,
-    AudienceField,
-    InReplyToField,
-    LocationField,
-    PreviewField,
-    ToField,
-    BtoField,
-    CcField,
-    BccField,
-    AttributedToField,
-    TagField,
+    UrlValue,
+    IconValue,
+    ImageValue,
+    AttachmentValue,
+    AudienceValue,
+    InReplyToValue,
+    LocationValue,
+    PreviewValue,
+    ToValue,
+    BtoValue,
+    CcValue,
+    BccValue,
+    AttributedToValue,
+    TagValue,
 } from "../../common/common.types";
 
 // TODO: types
@@ -45,7 +45,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#attachment Docs}
      */
-    attachment?: AttachmentField | AttachmentField[];
+    attachment?: AttachmentValue | AttachmentValue[];
 
 
     /**
@@ -55,7 +55,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#attributedTo Docs}
      */
-    attributedTo?: AttributedToField | AttributedToField[];
+    attributedTo?: AttributedToValue | AttributedToValue[];
 
     /**
      * Identifies one or more entities that represent the total population of entities
@@ -63,7 +63,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#audience Docs}
      */
-    audience?: AudienceField | AudienceField[];
+    audience?: AudienceValue | AudienceValue[];
 
     // TODO: only content or contentMap at one time
 
@@ -167,7 +167,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#icon Docs}
      */
-    icon?: IconField | IconField[];
+    icon?: IconValue | IconValue[];
 
     /**
      * Indicates an entity that describes an image for this object.
@@ -175,28 +175,28 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#image Docs}
      */
-    image?: ImageField | ImageField[];
+    image?: ImageValue | ImageValue[];
 
     /**
      * Indicates one or more entities for which this object is considered a response.
      *
      * {@link https://www.w3.org/ns/activitystreams#inReplyTo Docs}
      */
-    inReplyTo?: InReplyToField | InReplyToField[];
+    inReplyTo?: InReplyToValue | InReplyToValue[];
 
     /**
      * Indicates one or more physical or logical locations associated with the object.
      *
      * {@link https://www.w3.org/ns/activitystreams#location Docs}
      */
-    location?: LocationField | LocationField[];
+    location?: LocationValue | LocationValue[];
 
     /**
      * Identifies an entity that provides a preview of this object.
      *
      * {@link https://www.w3.org/ns/activitystreams#preview Docs}
      */
-    preview?: PreviewField;
+    preview?: PreviewValue;
 
     /**
      * The date and time at which the object was published.
@@ -248,7 +248,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#tag Docs}
      */
-    tag?: TagField | TagField[];
+    tag?: TagValue | TagValue[];
 
     /**
      * The date and time at which the object was updated.
@@ -271,35 +271,35 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#url Docs}
      */
-    url?: UrlField | UrlField[];
+    url?: UrlValue | UrlValue[];
 
     /**
      * Identifies an entity or entities considered to be part of the public primary audience of an Object.
      *
      * {@link https://www.w3.org/ns/activitystreams#to Docs}
      */
-    to?: ToField | ToField[];
+    to?: ToValue | ToValue[];
 
     /**
      * Identifies an Object that is part of the private primary audience of this Object.
      *
      * {@link https://www.w3.org/ns/activitystreams#bto Docs}
      */
-    bto?: BtoField | BtoField[];
+    bto?: BtoValue | BtoValue[];
 
     /**
      * Identifies an Object that is part of the public secondary audience of this Object.
      *
      * {@link https://www.w3.org/ns/activitystreams#cc Docs}
      */
-    cc?: CcField | CcField[];
+    cc?: CcValue | CcValue[];
 
     /**
      * Identifies one or more Objects that are part of the private secondary audience of this Object.
      *
      * {@link https://www.w3.org/ns/activitystreams#bcc Docs}
      */
-    bcc?: BccField | BccField[];
+    bcc?: BccValue | BccValue[];
 
     /**
      * When the object describes a time-bound resource, such as an audio or video, a meeting, etc.,
