@@ -3,7 +3,8 @@ import {ASObject} from "../models/asObject/ASObject.model";
 
 export enum ModelType {
     Object = 'Object',
-    Activity = 'Activity'
+    Activity = 'Activity',
+    Application = 'Application',
 }
 
 // TODO: implement
