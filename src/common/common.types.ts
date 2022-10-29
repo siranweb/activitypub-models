@@ -10,6 +10,9 @@ export enum ASModelType {
     Event = 'Event',
     Group = 'Group',
     Note = 'Note',
+    Organization = 'Organization',
+    Person = 'Person',
+    Service = 'Service',
 }
 
 // TODO: implement
