@@ -1,5 +1,6 @@
 import {ASBase} from "../ASBase.model";
 import { ASObjectFields } from "./ASObject.types";
+import {ModelType} from "../../common/common.types";
 
 /**
  * Describes an object of any kind. The Object type serves as the base type for most of
@@ -10,6 +11,6 @@ import { ASObjectFields } from "./ASObject.types";
  */
 export class ASObject extends ASBase<ASObjectFields>{
     constructor(fields: ASObjectFields) {
-        super(fields);
+        super(ModelType.Object, fields);
     }
 }

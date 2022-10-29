@@ -1,6 +1,11 @@
 import { Link } from "../models/Link.model";
 import {ASObject} from "../models/asObject/ASObject.model";
 
+export enum ModelType {
+    Object = 'Object',
+    Activity = 'Activity'
+}
+
 // TODO: implement
 export type Image = 'placeholder';
 export type Article = 'placeholder';

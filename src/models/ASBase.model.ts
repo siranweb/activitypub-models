@@ -11,9 +11,10 @@ export interface ModelBaseAPWithContext {
 export class ASBase<T> {
     public fields: T & ModelBaseAPWithContext;
 
-    constructor(fields: T) {
+    constructor(type: string, fields: T) {
         // TODO: make recursive copy
         this.fields = {
+            type,
             ...fields,
         } as T & ModelBaseAPWithContext;
     }
