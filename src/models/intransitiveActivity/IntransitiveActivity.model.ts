@@ -1,6 +1,6 @@
 import {ASBase} from "../ASBase.model";
 import {IntransitiveActivityFields} from './IntransitiveActivity.types';
-import {ModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/common.types";
 
 /**
  * Instances of intransitiveActivity are a subtype of
@@ -11,6 +11,6 @@ import {ModelType} from "../../common/common.types";
  */
 export class IntransitiveActivity extends ASBase<IntransitiveActivityFields>{
     constructor(fields: IntransitiveActivityFields) {
-        super(ModelType.Activity, fields);
+        super(ASModelType.Activity, fields);
     }
 }

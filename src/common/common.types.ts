@@ -1,10 +1,15 @@
 import { Link } from "../models/Link.model";
 import {ASObject} from "../models/asObject/ASObject.model";
 
-export enum ModelType {
+export enum ASModelType {
     Object = 'Object',
     Activity = 'Activity',
     Application = 'Application',
+    Article = 'Article',
+    Document = 'Document',
+    Event = 'Event',
+    Group = 'Group',
+    Note = 'Note',
 }
 
 // TODO: implement

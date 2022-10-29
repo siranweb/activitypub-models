@@ -1,6 +1,6 @@
 import {ASBase} from "../ASBase.model";
 import { ActivityFields } from "./Activity.types";
-import {ModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/common.types";
 
 /**
  * An Activity is a subtype of Object that describes some form of action that may happen,
@@ -12,6 +12,6 @@ import {ModelType} from "../../common/common.types";
  */
 export class Activity extends ASBase<ActivityFields>{
     constructor(fields: ActivityFields) {
-        super(ModelType.Activity, fields);
+        super(ASModelType.Activity, fields);
     }
 }
