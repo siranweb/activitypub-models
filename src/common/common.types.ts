@@ -16,6 +16,9 @@ export enum ASModelType {
     Image = 'Image',
     Page = 'Page',
     Video = 'Video',
+    Place = 'Place',
+    Relationship = 'Relationship',
+    Question = 'Question',
 }
 
 // TODO: implement
@@ -38,6 +41,7 @@ export type AnyASObject = ASObject | Article | Audio | Document | Event | Image 
 export type DateTime = string;
 export type Duration = string;
 export type UrlValue = string | Link;
+export type RelationshipValue = string | AnyASObject;
 export type IconValue = string | Image | Link;
 export type ImageValue = string | Image | Link;
 export type AttachmentValue = string | AnyASObject | Link;
@@ -58,3 +62,13 @@ export type TargetValue = string | AnyASObject | Link;
 export type ResultValue = string | AnyASObject | Link;
 export type OriginValue = string | AnyASObject | Link;
 export type InstrumentValue = string | AnyASObject | Link;
+export type OneOfValue = string | AnyASObject | Link;
+export type AnyOfValue = string | AnyASObject | Link;
+export type SubjectValue = string | AnyASObject | Link;
+export type AccuracyValue = number;
+export type AltitudeValue = number;
+export type LatitudeValue = number;
+export type LongitudeValue = number;
+export type RadiusValue = number;
+export type UnitsValue = 'cm' | 'feet' | 'inches' | 'km' | 'm' | 'miles' | string;
+export type ClosedValue = string | AnyASObject | Link | DateTime | boolean;
