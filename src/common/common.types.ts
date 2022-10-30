@@ -22,6 +22,7 @@ export enum ASModelType {
     Tombstone = 'Tombstone',
     Profile = 'Profile',
     Link = 'Link',
+    Mention = 'Mention',
 }
 
 // TODO: implement
