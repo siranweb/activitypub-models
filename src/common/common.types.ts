@@ -12,6 +12,10 @@ export enum ASModelType {
     Organization = 'Organization',
     Person = 'Person',
     Service = 'Service',
+    Audio = 'Audio',
+    Image = 'Image',
+    Page = 'Page',
+    Video = 'Video',
 }
 
 // TODO: implement
