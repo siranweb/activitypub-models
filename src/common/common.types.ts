@@ -23,7 +23,13 @@ export enum ASModelType {
     Profile = 'Profile',
     Link = 'Link',
     Mention = 'Mention',
+    Collection = 'Collection',
+    CollectionPage = 'CollectionPage',
+    OrderedCollection = 'OrderedCollection',
+    OrderedCollectionPage = 'OrderedCollectionPage',
 }
+
+export type Modify<T, R> = Omit<T, keyof R> & R;
 
 // TODO: implement
 export type Image = 'placeholder';
@@ -40,9 +46,12 @@ export type Tombstone = 'placeholder';
 export type Video = 'placeholder';
 export type Mention = 'placeholder';
 export type Link = 'placeholder';
+export type OrderedCollection = 'placeholder';
 export type Collection = 'placeholder';
-export type AnyCollection = Collection;
-export type AnyASObject = ASObject | Article | Audio | Document | Event | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video;
+export type CollectionPage = 'placeholder';
+export type OrderedCollectionPage = 'placeholder';
+export type AnyCollection = Collection | OrderedCollection;
+export type AnyASObject = ASObject | Article | Audio | Document | Event | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
 export type DateTime = string;
 export type LanguageTag = string;
 export type MediaType = string;
@@ -61,7 +70,7 @@ export type EndTimeValue = DateTime;
 export type StartTimeValue = DateTime;
 export type PublishedValue = DateTime;
 export type UpdatedValue = DateTime;
-export type RepliesValue = AnyCollection | string;
+export type RepliesValue = string | AnyCollection;
 export type RelationshipValue = string | AnyASObject;
 export type IconValue = string | Image | Link;
 export type ImageValue = string | Image | Link;
@@ -101,3 +110,19 @@ export type HreflangValue = LanguageTag;
 export type RelValue = string;
 export type HeightValue = number;
 export type WidthValue = number;
+export type TotalItemsValue = number;
+export type CollectionCurrentValue = string | CollectionPage | Link;
+export type CollectionFirstValue = string | CollectionPage | Link;
+export type CollectionLastValue = string | CollectionPage | Link;
+export type CollectionItemsValue = string | CollectionPage | Link;
+export type CollectionPagePartOfValue = string | Collection | Link;
+export type CollectionPageNextValue = string | Collection | Link;
+export type CollectionPagePrevValue = string | Collection | Link;
+export type OrderedCollectionCurrentValue = string | OrderedCollectionPage | Link;
+export type OrderedCollectionFirstValue = string | OrderedCollectionPage | Link;
+export type OrderedCollectionLastValue = string | OrderedCollectionPage | Link;
+export type OrderedCollectionItemsValue = string | OrderedCollectionPage | Link;
+export type OrderedCollectionPagePartOfValue = string | OrderedCollection | Link;
+export type OrderedCollectionPageNextValue = string | OrderedCollection | Link;
+export type OrderedCollectionPagePrevValue = string | OrderedCollection | Link;
+export type StartIndexValue = number;
