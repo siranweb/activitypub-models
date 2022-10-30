@@ -1,4 +1,4 @@
-import {ASBase} from "../ASBase.model";
+import {ASBase} from "../asBase/ASBase.model";
 import { ASObjectFields } from "./ASObject.types";
 import {ASModelType} from "../../common/common.types";
 

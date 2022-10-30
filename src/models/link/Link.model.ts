@@ -1,4 +1,4 @@
-import {ASBase} from "../ASBase.model";
+import {ASBase} from "../asBase/ASBase.model";
 import { LinkFields } from "./Link.types";
 import {ASModelType} from "../../common/common.types";
 

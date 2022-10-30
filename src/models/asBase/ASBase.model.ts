@@ -1,4 +1,4 @@
-import { contexts } from "../common/common.constants";
+import { contexts } from "../../common/common.constants";
 
 // TODO: types
 // TODO: renaming/refactor
