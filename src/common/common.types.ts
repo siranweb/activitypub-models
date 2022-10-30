@@ -20,6 +20,8 @@ export enum ASModelType {
     Relationship = 'Relationship',
     Question = 'Question',
     Tombstone = 'Tombstone',
+    Profile = 'Profile',
+    Link = 'Link',
 }
 
 // TODO: implement
@@ -41,13 +43,15 @@ export type Collection = 'placeholder';
 export type AnyCollection = Collection;
 export type AnyASObject = ASObject | Article | Audio | Document | Event | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video;
 export type DateTime = string;
+export type LanguageTag = string;
+export type MediaType = string;
 export type Duration = string;
 export type UrlValue = string | Link;
 export type IdValue = string;
 export type TypeValue = string;
 export type ContentValue = string;
 export type ContentMapValue = Record<string, string>;
-export type MediaTypeValue = string;
+export type MediaTypeValue = MediaType;
 export type NameValue = string;
 export type NameMapValue = Record<string, string>;
 export type SummaryValue = string;
@@ -91,3 +95,8 @@ export type ClosedValue = string | AnyASObject | Link | DateTime | boolean;
 export type FormerTypeValue = string;
 export type DeletedValue = DateTime;
 export type DescribesValue = string | AnyASObject;
+export type HrefValue = string;
+export type HreflangValue = LanguageTag;
+export type RelValue = string;
+export type HeightValue = number;
+export type WidthValue = number;

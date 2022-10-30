@@ -92,7 +92,6 @@ export interface ASObjectFields {
      */
     contentMap?: ContentMapValue;
 
-    // TODO: make type as MIME Media Type
     /**
      * When used on an Object, identifies the MIME media type of the value of the content property.
      * If not specified, the content property is assumed to contain text/html content.
