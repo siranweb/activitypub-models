@@ -1,6 +1,4 @@
 import {
-    DateTime,
-    Duration,
     UrlValue,
     IconValue,
     ImageValue,
@@ -16,7 +14,6 @@ import {
     AttributedToValue,
     TagValue,
     GeneratorValue,
-    Collection,
     IdValue,
     TypeValue,
     ContentValue,
@@ -24,7 +21,14 @@ import {
     MediaTypeValue,
     NameValue,
     NameMapValue,
-    EndTimeValue, StartTimeValue, PublishedValue, RepliesValue, SummaryValue, SummaryMapValue, UpdatedValue,
+    EndTimeValue,
+    StartTimeValue,
+    PublishedValue,
+    RepliesValue,
+    SummaryValue,
+    SummaryMapValue,
+    UpdatedValue,
+    DurationValue,
 } from "../../common/common.types";
 
 export interface ASObjectFields {
@@ -318,5 +322,5 @@ export interface ASObjectFields {
      * P1DT2H (1 day, 2 hours)
      * P2Y6M5DT12H35M30S (2 years, 6 months, 5 days, 12 hours, 35 minutes, 30 seconds)
      */
-    duration?: Duration;
+    duration?: DurationValue;
 }

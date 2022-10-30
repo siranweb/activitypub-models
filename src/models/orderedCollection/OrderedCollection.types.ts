@@ -1,10 +1,10 @@
 import {
-    Modify,
     OrderedCollectionCurrentValue,
     OrderedCollectionFirstValue, OrderedCollectionItemsValue,
     OrderedCollectionLastValue
 } from "../../common/common.types";
 import {CollectionFields} from "../collection/Collection.types";
+import {Modify} from "../../common/utils";
 
 export interface OrderedCollectionFields extends Modify<CollectionFields, {
 

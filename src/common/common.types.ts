@@ -1,4 +1,22 @@
 import {ASObject} from "../models/asObject/ASObject.model";
+import {Collection} from "../models/collection/Collection.model";
+import {OrderedCollection} from "../models/orderedCollection/OrderedCollection.model";
+import {Article} from "../models/article/Article.model";
+import {Audio} from "../models/audio/Audio.model";
+import {Document} from "../models/document/Document.model";
+import {ASEvent} from "../models/asEvent/ASEvent.model";
+import {Image} from "../models/image/Image.model";
+import {Note} from "../models/note/Note.model";
+import {Page} from "../models/page/Page.model";
+import {Place} from "../models/place/Place.model";
+import {Profile} from "../models/profile/Profile.model";
+import {Relationship} from "../models/relationship/Relationship.model";
+import {Tombstone} from "../models/tombstone/Tombstone.model";
+import {Video} from "../models/video/Video.model";
+import {Link} from "../models/link/Link.model";
+import {Mention} from "../models/mention/Mention.model";
+import {CollectionPage} from "../models/collectionPage/CollectionPage.model";
+import {OrderedCollectionPage} from "../models/orderedCollectionPage/OrderedCollectionPage.model";
 
 export enum ASModelType {
     Object = 'Object',
@@ -29,36 +47,18 @@ export enum ASModelType {
     OrderedCollectionPage = 'OrderedCollectionPage',
 }
 
-export type Modify<T, R> = Omit<T, keyof R> & R;
-
-// TODO: implement
-export type Image = 'placeholder';
-export type Article = 'placeholder';
-export type Audio = 'placeholder';
-export type Document = 'placeholder';
-export type Event = 'placeholder';
-export type Note = 'placeholder';
-export type Page = 'placeholder';
-export type Place = 'placeholder';
-export type Profile = 'placeholder';
-export type Relationship = 'placeholder';
-export type Tombstone = 'placeholder';
-export type Video = 'placeholder';
-export type Mention = 'placeholder';
-export type Link = 'placeholder';
-export type OrderedCollection = 'placeholder';
-export type Collection = 'placeholder';
-export type CollectionPage = 'placeholder';
-export type OrderedCollectionPage = 'placeholder';
 export type AnyCollection = Collection | OrderedCollection;
-export type AnyASObject = ASObject | Article | Audio | Document | Event | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
+export type AnyASObject = ASObject | Article | Audio | Document | ASEvent | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
+
 export type DateTime = string;
 export type LanguageTag = string;
 export type MediaType = string;
 export type Duration = string;
+
 export type UrlValue = string | Link;
 export type IdValue = string;
 export type TypeValue = string;
+export type DurationValue = Duration;
 export type ContentValue = string;
 export type ContentMapValue = Record<string, string>;
 export type MediaTypeValue = MediaType;

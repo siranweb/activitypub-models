@@ -1,17 +1,19 @@
 import {OrderedCollectionFields} from "../orderedCollection/OrderedCollection.types";
 import {
-    Modify,
     OrderedCollectionPageNextValue,
     OrderedCollectionPagePartOfValue,
     OrderedCollectionPagePrevValue,
     StartIndexValue
 } from "../../common/common.types";
 import {CollectionPageFields} from "../collectionPage/CollectionPage.types";
+import {Modify} from "../../common/utils";
+
+interface OmittedCollectionPageFields extends Omit<CollectionPageFields, 'current' | 'first' | 'items' | 'last'> {}
 
 export interface OrderedCollectionPageFields
     extends
         OrderedCollectionFields,
-        Modify<CollectionPageFields, {
+        Modify<OmittedCollectionPageFields, {
 
             /**
              * Identifies the OrderedCollection to which a OrderedCollectionPage objects items belong.
