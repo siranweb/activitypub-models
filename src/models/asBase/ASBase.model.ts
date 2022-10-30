@@ -1,3 +1,5 @@
+import { contexts } from "../../common/common.constants";
+
 // TODO: types
 // TODO: renaming/refactor
 export type Context = string | any[];
@@ -17,9 +19,10 @@ export class ASBase<T> {
     }
 
     // TODO: rewrite (better option to handle multiple contexts)
-    public addContext(context?: Context): this {
+    // some comment
+    public setContext(context?: Context): this {
         this.fields = {
-            ['@context']: context || 'https://www.w3.org/ns/activitystreams',
+            ['@context']: context || contexts.activityStreamsV2,
             ...this.fields
         }
         return this;
