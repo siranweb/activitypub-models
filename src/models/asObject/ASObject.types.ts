@@ -17,6 +17,14 @@ import {
     TagValue,
     GeneratorValue,
     Collection,
+    IdValue,
+    TypeValue,
+    ContentValue,
+    ContentMapValue,
+    MediaTypeValue,
+    NameValue,
+    NameMapValue,
+    EndTimeValue, StartTimeValue, PublishedValue, RepliesValue, SummaryValue, SummaryMapValue, UpdatedValue,
 } from "../../common/common.types";
 
 export interface ASObjectFields {
@@ -26,7 +34,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Docs (@id)}
      */
-    id?: string;
+    id?: IdValue;
 
     /**
      * Identifies the {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
@@ -34,7 +42,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Docs (@type)}
      */
-    type?: string | string[];
+    type?: TypeValue | TypeValue[];
 
     /**
      * Identifies resources attached or related to an object that potentially requires special handling.
@@ -72,7 +80,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#content Docs}
      */
-    content?: string;
+    content?: ContentValue;
 
     /**
      * The content or textual representation of the Object encoded as a JSON string.
@@ -82,7 +90,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#content Docs}
      */
-    contentMap?: Record<string, string | undefined>;
+    contentMap?: ContentMapValue;
 
     // TODO: make type as MIME Media Type
     /**
@@ -92,7 +100,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#mediaType Docs}
      */
-    mediaType?: string;
+    mediaType?: MediaTypeValue;
 
     // TODO: only name or nameMap at one time
 
@@ -103,7 +111,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#name Docs}
      */
-    name?: string;
+    name?: NameValue;
 
     /**
      * A simple, human-readable, plain-text name for the object.
@@ -112,7 +120,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#name Docs}
      */
-    nameMap?: Record<string, string | undefined>;
+    nameMap?: NameMapValue;
 
     /**
      * The date and time describing the actual or expected ending time of the object.
@@ -130,7 +138,7 @@ export interface ASObjectFields {
      * 2020-08-08T08:30:11
      * 2020-08-08
      */
-    endTime?: DateTime;
+    endTime?: EndTimeValue;
 
     /**
      * The date and time describing the actual or expected starting time of the object.
@@ -148,7 +156,7 @@ export interface ASObjectFields {
      * 2020-08-08T08:30:11
      * 2020-08-08
      */
-    startTime?: DateTime;
+    startTime?: StartTimeValue;
 
     /**
      * Identifies the entity (e.g. an application) that generated the object.
@@ -209,14 +217,14 @@ export interface ASObjectFields {
      * 2020-08-08T08:30:11
      * 2020-08-08
      */
-    published?: DateTime;
+    published?: PublishedValue;
 
     /**
      * Identifies a Collection containing objects considered to be responses to this object.
      *
      * {@link https://www.w3.org/ns/activitystreams#replies Docs}
      */
-    replies?: Collection;
+    replies?: RepliesValue;
 
     // TODO: only summary or summaryMap at one time
 
@@ -227,7 +235,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#summary Docs}
      */
-    summary?: string;
+    summary?: SummaryValue;
 
     /**
      * A natural language summarization of the object encoded as HTML.
@@ -236,7 +244,7 @@ export interface ASObjectFields {
      *
      * {@link https://www.w3.org/ns/activitystreams#summary Docs}
      */
-    summaryMap?: Record<string, string | undefined>;
+    summaryMap?: SummaryMapValue;
 
     /**
      * One or more "tags" that have been associated with an objects. A tag can be any kind of Object.
@@ -261,7 +269,7 @@ export interface ASObjectFields {
      * 2020-08-08T08:30:11
      * 2020-08-08
      */
-    updated?: DateTime;
+    updated?: UpdatedValue;
 
     /**
      * Identifies one or more links to representations of the object.

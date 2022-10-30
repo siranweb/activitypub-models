@@ -19,6 +19,7 @@ export enum ASModelType {
     Place = 'Place',
     Relationship = 'Relationship',
     Question = 'Question',
+    Tombstone = 'Tombstone',
 }
 
 // TODO: implement
@@ -37,10 +38,25 @@ export type Video = 'placeholder';
 export type Mention = 'placeholder';
 export type Link = 'placeholder';
 export type Collection = 'placeholder';
+export type AnyCollection = Collection;
 export type AnyASObject = ASObject | Article | Audio | Document | Event | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video;
 export type DateTime = string;
 export type Duration = string;
 export type UrlValue = string | Link;
+export type IdValue = string;
+export type TypeValue = string;
+export type ContentValue = string;
+export type ContentMapValue = Record<string, string>;
+export type MediaTypeValue = string;
+export type NameValue = string;
+export type NameMapValue = Record<string, string>;
+export type SummaryValue = string;
+export type SummaryMapValue = Record<string, string>;
+export type EndTimeValue = DateTime;
+export type StartTimeValue = DateTime;
+export type PublishedValue = DateTime;
+export type UpdatedValue = DateTime;
+export type RepliesValue = AnyCollection | string;
 export type RelationshipValue = string | AnyASObject;
 export type IconValue = string | Image | Link;
 export type ImageValue = string | Image | Link;
@@ -72,3 +88,6 @@ export type LongitudeValue = number;
 export type RadiusValue = number;
 export type UnitsValue = 'cm' | 'feet' | 'inches' | 'km' | 'm' | 'miles' | string;
 export type ClosedValue = string | AnyASObject | Link | DateTime | boolean;
+export type FormerTypeValue = string;
+export type DeletedValue = DateTime;
+export type DescribesValue = string | AnyASObject;
