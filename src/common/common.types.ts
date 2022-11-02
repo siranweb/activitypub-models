@@ -126,3 +126,7 @@ export type OrderedCollectionPagePartOfValue = string | OrderedCollection | Link
 export type OrderedCollectionPageNextValue = string | OrderedCollection | Link;
 export type OrderedCollectionPagePrevValue = string | OrderedCollection | Link;
 export type StartIndexValue = number;
+export type SourceValue = {
+    content: ContentValue,
+    mediaType?: MediaType,
+}

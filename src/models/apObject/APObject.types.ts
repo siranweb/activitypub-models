@@ -28,7 +28,7 @@ import {
     SummaryValue,
     SummaryMapValue,
     UpdatedValue,
-    DurationValue,
+    DurationValue, SourceValue,
 } from "../../common/common.types";
 
 export interface APObjectFields {
@@ -323,4 +323,15 @@ export interface APObjectFields {
      * P2Y6M5DT12H35M30S (2 years, 6 months, 5 days, 12 hours, 35 minutes, 30 seconds)
      */
     duration?: DurationValue;
+
+    /**
+     * ActivityPub extends the Object by supplying the source property. The source property is intended to
+     * convey some sort of source from which the content markup was derived, as a form of provenance, or to
+     * support future editing by clients. In general, clients do the conversion from source to content, not
+     * the other way around.
+     * The value of source is itself an object which uses its own content and mediaType fields to supply source information.
+     *
+     * {@link https://www.w3.org/TR/activitypub/#source-property Docs}
+     */
+    source?: SourceValue;
 }
