@@ -1,14 +1,14 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
-import {ASEventFields} from "./ASEvent.types";
+import {APEventFields} from "./APEvent.types";
 
 /**
  * Represents any kind of event
  *
  * {@link https://www.w3.org/ns/activitystreams#Event Docs}
  */
-export class ASEvent extends ASBase<ASEventFields>{
-    constructor(fields: ASEventFields) {
+export class APEvent extends APBase<APEventFields>{
+    constructor(fields: APEventFields) {
         super({
             type: ASModelType.Event,
             ...fields

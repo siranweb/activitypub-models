@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {VideoFields} from "./Video.types";
 
@@ -7,7 +7,7 @@ import {VideoFields} from "./Video.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Video Docs}
  */
-export class Video extends ASBase<VideoFields>{
+export class Video extends APBase<VideoFields>{
     constructor(fields: VideoFields) {
         super({
             type: ASModelType.Video,

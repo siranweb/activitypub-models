@@ -31,7 +31,7 @@ import {
     DurationValue,
 } from "../../common/common.types";
 
-export interface ASObjectFields {
+export interface APObjectFields {
     /**
      * Provides the globally unique identifier for
      * an {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}

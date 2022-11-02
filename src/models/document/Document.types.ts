@@ -1,3 +1,3 @@
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {APObjectFields} from "../apObject/APObject.types";
 
-export interface DocumentFields extends ASObjectFields {}
+export interface DocumentFields extends APObjectFields {}

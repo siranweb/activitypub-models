@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {PlaceFields} from "./Place.types";
 
@@ -9,7 +9,7 @@ import {PlaceFields} from "./Place.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Place Docs}
  */
-export class Place extends ASBase<PlaceFields>{
+export class Place extends APBase<PlaceFields>{
     constructor(fields: PlaceFields) {
         super({
             type: ASModelType.Place,

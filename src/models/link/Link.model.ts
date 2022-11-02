@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import { LinkFields } from "./Link.types";
 import {ASModelType} from "../../common/common.types";
 
@@ -12,7 +12,7 @@ import {ASModelType} from "../../common/common.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Link Docs}
  */
-export class Link extends ASBase<LinkFields>{
+export class Link extends APBase<LinkFields>{
     constructor(fields: LinkFields) {
         super({
             type: ASModelType.Link,

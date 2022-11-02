@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {CollectionPageFields} from "./CollectionPage.types";
 
@@ -7,7 +7,7 @@ import {CollectionPageFields} from "./CollectionPage.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#CollectionPage Docs}
  */
-export class CollectionPage extends ASBase<CollectionPageFields>{
+export class CollectionPage extends APBase<CollectionPageFields>{
     constructor(fields: CollectionPageFields) {
         super({
             type: ASModelType.CollectionPage,

@@ -1,7 +1,7 @@
 import {DeletedValue, FormerTypeValue} from "../../common/common.types";
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {APObjectFields} from "../apObject/APObject.types";
 
-export interface TombstoneFields extends ASObjectFields {
+export interface TombstoneFields extends APObjectFields {
 
     /**
      * On a Tombstone object, the formerType property identifies

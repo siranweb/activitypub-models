@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import { ActivityFields } from "./Activity.types";
 import {ASModelType} from "../../common/common.types";
 
@@ -10,7 +10,7 @@ import {ASModelType} from "../../common/common.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Activity Docs}
  */
-export class Activity extends ASBase<ActivityFields>{
+export class Activity extends APBase<ActivityFields>{
     constructor(fields: ActivityFields) {
         super({
             type: ASModelType.Activity,

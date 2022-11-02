@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {GroupFields} from "./Group.types";
 
@@ -7,7 +7,7 @@ import {GroupFields} from "./Group.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Group Docs}
  */
-export class Group extends ASBase<GroupFields>{
+export class Group extends APBase<GroupFields>{
     constructor(fields: GroupFields) {
         super({
             type: ASModelType.Group,

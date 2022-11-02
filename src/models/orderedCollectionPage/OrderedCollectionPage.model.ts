@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {OrderedCollectionPageFields} from "./OrderedCollectionPage.types";
 
@@ -7,7 +7,7 @@ import {OrderedCollectionPageFields} from "./OrderedCollectionPage.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#OrderedCollectionPage Docs}
  */
-export class OrderedCollectionPage extends ASBase<OrderedCollectionPageFields>{
+export class OrderedCollectionPage extends APBase<OrderedCollectionPageFields>{
     constructor(fields: OrderedCollectionPageFields) {
         super({
             type: ASModelType.OrderedCollectionPage,

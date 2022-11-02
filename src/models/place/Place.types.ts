@@ -1,4 +1,4 @@
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {APObjectFields} from "../apObject/APObject.types";
 import {
     AccuracyValue,
     AltitudeValue,
@@ -9,7 +9,7 @@ import {
 } from "../../common/common.types";
 
 
-export interface PlaceFields extends ASObjectFields {
+export interface PlaceFields extends APObjectFields {
 
     /**
      * Indicates the accuracy of position coordinates on a Place objects.

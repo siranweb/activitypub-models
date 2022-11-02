@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {RelationshipFields} from "./Relationship.types";
 
@@ -10,7 +10,7 @@ import {RelationshipFields} from "./Relationship.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Relationship Docs}
  */
-export class Relationship extends ASBase<RelationshipFields>{
+export class Relationship extends APBase<RelationshipFields>{
     constructor(fields: RelationshipFields) {
         super({
             type: ASModelType.Relationship,

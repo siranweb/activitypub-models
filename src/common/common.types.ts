@@ -1,10 +1,10 @@
-import {ASObject} from "../models/asObject/ASObject.model";
+import {APObject} from "../models/apObject/APObject.model";
 import {Collection} from "../models/collection/Collection.model";
 import {OrderedCollection} from "../models/orderedCollection/OrderedCollection.model";
 import {Article} from "../models/article/Article.model";
 import {Audio} from "../models/audio/Audio.model";
 import {Document} from "../models/document/Document.model";
-import {ASEvent} from "../models/asEvent/ASEvent.model";
+import {APEvent} from "../models/apEvent/APEvent.model";
 import {Image} from "../models/image/Image.model";
 import {Note} from "../models/note/Note.model";
 import {Page} from "../models/page/Page.model";
@@ -48,7 +48,7 @@ export enum ASModelType {
 }
 
 export type AnyCollection = Collection | OrderedCollection;
-export type AnyASObject = ASObject | Article | Audio | Document | ASEvent | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
+export type AnyASObject = APObject | Article | Audio | Document | APEvent | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
 
 export type DateTime = string;
 export type LanguageTag = string;

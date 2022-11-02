@@ -1,8 +1,8 @@
 
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {APObjectFields} from "../apObject/APObject.types";
 import {DescribesValue} from "../../common/common.types";
 
-export interface ProfileFields extends ASObjectFields {
+export interface ProfileFields extends APObjectFields {
 
     /**
      * On a Profile object, the describes property identifies
