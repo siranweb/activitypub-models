@@ -35,18 +35,25 @@ export interface APObjectFields {
     /**
      * Provides the globally unique identifier for
      * an {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
+     * All objects must have unique global identifier (unless the object is transient,
+     * in which case the id MAY be omitted).
      *
-     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Docs (@id)}
+     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object AS Docs (@id)}
+     *
+     * {@link https://www.w3.org/TR/activitypub/#obj-id AP Docs}
      */
     id?: IdValue;
 
     /**
      * Identifies the {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
      * type. Multiple values may be specified.
+     * All objects must have type.
      *
-     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Docs (@type)}
+     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object AS Docs (@type)}
+     *
+     * {@link https://www.w3.org/TR/activitypub/#obj-id AP Docs}
      */
-    type?: TypeValue | TypeValue[];
+    type: TypeValue | TypeValue[];
 
     /**
      * Identifies resources attached or related to an object that potentially requires special handling.
