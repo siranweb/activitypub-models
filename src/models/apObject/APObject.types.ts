@@ -47,13 +47,13 @@ export interface APObjectFields {
     /**
      * Identifies the {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
      * type. Multiple values may be specified.
-     * All objects must have type.
+     * All objects must have type. There is already a bunch of default types presented by this library.
      *
      * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object AS Docs (@type)}
      *
      * {@link https://www.w3.org/TR/activitypub/#obj-id AP Docs}
      */
-    type: TypeValue | TypeValue[];
+    type?: TypeValue | TypeValue[];
 
     /**
      * Identifies resources attached or related to an object that potentially requires special handling.
