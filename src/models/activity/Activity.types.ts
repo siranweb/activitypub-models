@@ -6,7 +6,7 @@ import {
     OriginValue,
     ResultValue,
     TargetValue
-} from "../../common/common.types";
+} from "../../common/types";
 
 export interface ActivityFields extends APObjectFields {
 

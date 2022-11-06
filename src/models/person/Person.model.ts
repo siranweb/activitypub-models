@@ -1,5 +1,5 @@
 import {APBase} from "../apBase/APBase.model";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 import {PersonFields} from "./Person.types";
 
 /**

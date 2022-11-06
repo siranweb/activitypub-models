@@ -1,5 +1,5 @@
 import {IntransitiveActivityFields} from "../intransitiveActivity/IntransitiveActivity.types";
-import {AnyOfValue, ClosedValue, OneOfValue} from "../../common/common.types";
+import {AnyOfValue, ClosedValue, OneOfValue} from "../../common/types";
 
 export interface QuestionFields extends IntransitiveActivityFields {
 

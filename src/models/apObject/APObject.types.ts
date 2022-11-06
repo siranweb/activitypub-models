@@ -29,7 +29,7 @@ import {
     SummaryMapValue,
     UpdatedValue,
     DurationValue, SourceValue, LikesValue, SharesValue,
-} from "../../common/common.types";
+} from "../../common/types";
 
 export interface APObjectFields {
     /**

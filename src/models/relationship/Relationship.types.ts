@@ -1,5 +1,5 @@
 import {APObjectFields} from "../apObject/APObject.types";
-import {SubjectValue, ObjectValue, RelationshipValue} from "../../common/common.types";
+import {SubjectValue, ObjectValue, RelationshipValue} from "../../common/types";
 
 export interface RelationshipFields extends APObjectFields {
 

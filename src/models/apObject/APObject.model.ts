@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import { APObjectFields } from "./APObject.types";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 
 /**
  * Describes an object of any kind. The Object type serves as the base type for most of

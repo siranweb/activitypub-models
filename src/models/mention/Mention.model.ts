@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import {MentionFields} from "./Mention.types";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 /**
  * A specialized Link that represents an @mention.
  *

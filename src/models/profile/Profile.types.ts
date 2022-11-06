@@ -1,6 +1,6 @@
 
 import {APObjectFields} from "../apObject/APObject.types";
-import {DescribesValue} from "../../common/common.types";
+import {DescribesValue} from "../../common/types";
 
 export interface ProfileFields extends APObjectFields {
 

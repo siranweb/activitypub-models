@@ -4,7 +4,7 @@ import {
     CollectionFirstValue, CollectionItemsValue,
     CollectionLastValue,
     TotalItemsValue
-} from "../../common/common.types";
+} from "../../common/types";
 
 export interface CollectionFields extends APObjectFields {
 

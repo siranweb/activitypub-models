@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import { LinkFields } from "./Link.types";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 
 /**
  * A Link is an indirect, qualified reference to a resource identified by a URL.

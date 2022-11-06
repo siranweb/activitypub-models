@@ -1,26 +1,26 @@
-import { contexts } from "../../common/common.constants";
+import { contexts } from "../../common/constants";
+import { ContextValue } from "../../common/types";
+import { cloneObjDeep } from "../../common/utils";
 
-// TODO: types
-// TODO: renaming/refactor
-export type Context = string | any[];
-
-export interface ModelBaseAPWithContext {
-    '@context'?: Context;
+interface ContextField {
+    '@context'?: ContextValue | ContextValue[];
 }
 
 export class APBase<T> {
-    public fields: T & ModelBaseAPWithContext;
+    public fields: T & ContextField;
 
-    constructor(fields: T) {
-        // TODO: make recursive copy
+    constructor(fields: T & ContextField) {
+        const obj = cloneObjDeep<T & ContextField>(fields);
         this.fields = {
-            ...fields,
-        } as T & ModelBaseAPWithContext;
+            ...obj,
+        } as T & ContextField;
     }
 
-    // TODO: rewrite (better option to handle multiple contexts)
-    // some comment
-    public setContext(context?: Context): this {
+    private parseValue(value: any): any {
+        return value instanceof APBase ? value.toPlain() : value;
+    }
+
+    public withContext(context?: ContextValue): this {
         this.fields = {
             ['@context']: context || contexts.activityStreamsV2,
             ...this.fields
@@ -28,20 +28,33 @@ export class APBase<T> {
         return this;
     }
 
-    public plain(): Record<string, any> {
+    public toPlain(): Record<string, any> {
         const result = {} as Record<string, any>;
-        for (const [key, node] of Object.entries(this.fields)) {
-            if (node instanceof APBase) {
-                result[key] = node.plain();
+        for (const [key, value] of Object.entries(this.fields)) {
+            const isFunction = typeof value === 'function';
+            const isArray = Array.isArray(value);
+            const isNull = value === null;
+            const isUndefined = value === undefined;
+            const isObject = !isArray && !isNull && typeof value === 'object';
+            const isPlain = !isArray && !isNull && !isUndefined && !isObject && !isFunction;
+
+            if (isArray) {
+                result[key] = value.map(v => this.parseValue(v));
+            } else if (isNull || isUndefined) {
+                result[key] = null;
+            } else if (isObject) {
+                result[key] = {};
+                Object.entries(value).forEach(([k, v]) => result[key][k] = this.parseValue(v));
+            } else if (isPlain) {
+                result[key] = this.parseValue(value);
             } else {
-                result[key] = node;
+                throw new Error(`Unable to convert key ${key} with value ${value}. Type of value: ${typeof value}`);
             }
         }
-        // TODO make recursive copy
         return result;
     }
 
-    public json() {
-        return JSON.stringify(this.plain());
+    public toJSON(): string {
+        return JSON.stringify(this.toPlain());
     }
 }

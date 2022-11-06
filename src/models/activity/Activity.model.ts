@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import { ActivityFields } from "./Activity.types";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 
 /**
  * An Activity is a subtype of Object that describes some form of action that may happen,

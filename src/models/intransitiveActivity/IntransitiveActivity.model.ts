@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import {IntransitiveActivityFields} from './IntransitiveActivity.types';
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 
 /**
  * Instances of intransitiveActivity are a subtype of

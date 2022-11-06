@@ -13,7 +13,7 @@ import {
     ProxyUrlValue, SharedInboxValue,
     SignClientKeyValue,
     StreamsValue
-} from "../../common/common.types";
+} from "../../common/types";
 
 export interface EndpointsValue {
 

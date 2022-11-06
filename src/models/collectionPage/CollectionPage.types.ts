@@ -1,5 +1,5 @@
 import {CollectionFields} from "../collection/Collection.types";
-import {CollectionPageNextValue, CollectionPagePartOfValue, CollectionPagePrevValue} from "../../common/common.types";
+import {CollectionPageNextValue, CollectionPagePartOfValue, CollectionPagePrevValue} from "../../common/types";
 
 export interface CollectionPageFields extends CollectionFields {
 

@@ -55,6 +55,7 @@ export type LanguageTag = string;
 export type MediaType = string;
 export type Duration = string;
 
+export type ContextValue = string | Record<string, string>;
 export type UrlValue = string | Link;
 export type IdValue = string;
 export type TypeValue = string;
