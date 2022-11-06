@@ -14,10 +14,11 @@ ActivityPub JS/TS models with official docs. Still in development, not ready for
 
 ## Roadmap
 
- - [ ] Implement all ActivityPub/ActivityStreams models
- - [ ] Add more tools, like parsers & converters and utils
- - [ ] Prepare docs
+ - [x] Implement all ActivityPub/ActivityStreams models
+ - [ ] Prepare infrastructure
+ - [ ] Add more tools, like parsers/converters and utils
  - [ ] Publish as NPM package
+ - [ ] Prepare docs
 
 ## Contact
 
