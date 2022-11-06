@@ -1,3 +1,3 @@
-import {APObjectFields} from "../apObject/APObject.types";
+import {ActorFields} from "../actor/Actor.types";
 
-export interface OrganizationFields extends APObjectFields {}
+export interface OrganizationFields extends ActorFields {}
