@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {IntransitiveActivityFields} from './IntransitiveActivity.types';
 import {ASModelType} from "../../common/common.types";
 
@@ -9,7 +9,7 @@ import {ASModelType} from "../../common/common.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#IntransitiveActivity Docs}
  */
-export class IntransitiveActivity extends ASBase<IntransitiveActivityFields>{
+export class IntransitiveActivity extends APBase<IntransitiveActivityFields>{
     constructor(fields: IntransitiveActivityFields) {
         super({
             type: ASModelType.Activity,

@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {MentionFields} from "./Mention.types";
 import {ASModelType} from "../../common/common.types";
 /**
@@ -6,7 +6,7 @@ import {ASModelType} from "../../common/common.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Mention Docs}
  */
-export class Mention extends ASBase<MentionFields>{
+export class Mention extends APBase<MentionFields>{
     constructor(fields: MentionFields) {
         super({
             type: ASModelType.Mention,

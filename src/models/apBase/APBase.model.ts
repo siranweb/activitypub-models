@@ -8,7 +8,7 @@ export interface ModelBaseAPWithContext {
     '@context'?: Context;
 }
 
-export class ASBase<T> {
+export class APBase<T> {
     public fields: T & ModelBaseAPWithContext;
 
     constructor(fields: T) {
@@ -31,7 +31,7 @@ export class ASBase<T> {
     public plain(): Record<string, any> {
         const result = {} as Record<string, any>;
         for (const [key, node] of Object.entries(this.fields)) {
-            if (node instanceof ASBase) {
+            if (node instanceof APBase) {
                 result[key] = node.plain();
             } else {
                 result[key] = node;

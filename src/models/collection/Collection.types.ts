@@ -1,4 +1,4 @@
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {APObjectFields} from "../apObject/APObject.types";
 import {
     CollectionCurrentValue,
     CollectionFirstValue, CollectionItemsValue,
@@ -6,7 +6,7 @@ import {
     TotalItemsValue
 } from "../../common/common.types";
 
-export interface CollectionFields extends ASObjectFields {
+export interface CollectionFields extends APObjectFields {
 
     /**
      * A non-negative integer specifying the total number of objects contained by

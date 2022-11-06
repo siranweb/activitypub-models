@@ -28,23 +28,30 @@ import {
     SummaryValue,
     SummaryMapValue,
     UpdatedValue,
-    DurationValue,
+    DurationValue, SourceValue, LikesValue, SharesValue,
 } from "../../common/common.types";
 
-export interface ASObjectFields {
+export interface APObjectFields {
     /**
      * Provides the globally unique identifier for
      * an {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
+     * All objects must have unique global identifier (unless the object is transient,
+     * in which case the id MAY be omitted).
      *
-     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Docs (@id)}
+     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object AS Docs (@id)}
+     *
+     * {@link https://www.w3.org/TR/activitypub/#obj-id AP Docs}
      */
     id?: IdValue;
 
     /**
      * Identifies the {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
      * type. Multiple values may be specified.
+     * All objects must have type. There is already a bunch of default types presented by this library.
      *
-     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Docs (@type)}
+     * {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object AS Docs (@type)}
+     *
+     * {@link https://www.w3.org/TR/activitypub/#obj-id AP Docs}
      */
     type?: TypeValue | TypeValue[];
 
@@ -80,7 +87,7 @@ export interface ASObjectFields {
      * The content or textual representation of the Object encoded as a JSON string.
      * By default, the value of content is HTML. The mediaType property can be
      * used in the object to indicate a different content type.
-     * [For multiple language-tagged values use contentMap property].
+     * [For multiple language-tagged values use contentMap property]
      *
      * {@link https://www.w3.org/ns/activitystreams#content Docs}
      */
@@ -90,7 +97,7 @@ export interface ASObjectFields {
      * The content or textual representation of the Object encoded as a JSON string.
      * By default, the value of content is HTML. The mediaType property can be
      * used in the object to indicate a different content type.
-     * [For a single value use content property].
+     * [For a single value use content property]
      *
      * {@link https://www.w3.org/ns/activitystreams#content Docs}
      */
@@ -323,4 +330,35 @@ export interface ASObjectFields {
      * P2Y6M5DT12H35M30S (2 years, 6 months, 5 days, 12 hours, 35 minutes, 30 seconds)
      */
     duration?: DurationValue;
+
+    /**
+     * ActivityPub extends the Object by supplying the source property. The source property is intended to
+     * convey some sort of source from which the content markup was derived, as a form of provenance, or to
+     * support future editing by clients. In general, clients do the conversion from source to content, not
+     * the other way around.
+     * The value of source is itself an object which uses its own content and mediaType fields to supply source information.
+     *
+     * {@link https://www.w3.org/TR/activitypub/#source-property Docs}
+     */
+    source?: SourceValue;
+
+    /**
+     * Every object MAY have a "likes" collection. This is a list of all Like activities with this object as
+     * the object property, added as a side effect. The likes collection MUST be either an OrderedCollection
+     * or a Collection and MAY be filtered on privileges of an authenticated user or as appropriate when
+     * no authentication is given.
+     *
+     * {@link https://www.w3.org/TR/activitypub/#likes Docs}
+     */
+    likes?: LikesValue;
+
+    /**
+     * Every object MAY have a "shares" collection. This is a list of all Announce activities with this object as
+     * the object property, added as a side effect. The shares collection MUST be either an OrderedCollection
+     * or a Collection and MAY be filtered on privileges of an authenticated user or as appropriate when
+     * no authentication is given.
+     *
+     * {@link https://www.w3.org/TR/activitypub/#shares Docs}
+     */
+    shares?: SharesValue;
 }

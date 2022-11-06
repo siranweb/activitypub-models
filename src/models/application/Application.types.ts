@@ -1,3 +1,3 @@
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {ActorFields} from "../actor/Actor.types";
 
-export interface ApplicationFields extends ASObjectFields {}
+export interface ApplicationFields extends ActorFields {}

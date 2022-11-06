@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {QuestionFields} from "./Question.types";
 
@@ -13,7 +13,7 @@ import {QuestionFields} from "./Question.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Question Docs}
  */
-export class Question extends ASBase<QuestionFields>{
+export class Question extends APBase<QuestionFields>{
     constructor(fields: QuestionFields) {
         super({
             type: ASModelType.Question,

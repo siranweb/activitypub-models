@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {OrganizationFields} from "./Organization.types";
 
@@ -7,7 +7,7 @@ import {OrganizationFields} from "./Organization.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Organization Docs}
  */
-export class Organization extends ASBase<OrganizationFields>{
+export class Organization extends APBase<OrganizationFields>{
     constructor(fields: OrganizationFields) {
         super({
             type: ASModelType.Organization,

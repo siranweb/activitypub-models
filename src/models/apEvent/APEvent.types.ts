@@ -1,3 +1,3 @@
 import {APObjectFields} from "../apObject/APObject.types";
 
-export interface ArticleFields extends APObjectFields {}
+export interface APEventFields extends APObjectFields {}

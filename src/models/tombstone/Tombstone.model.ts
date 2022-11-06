@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {TombstoneFields} from "./Tombstone.types";
 
@@ -9,7 +9,7 @@ import {TombstoneFields} from "./Tombstone.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Tombstone Docs}
  */
-export class Tombstone extends ASBase<TombstoneFields>{
+export class Tombstone extends APBase<TombstoneFields>{
     constructor(fields: TombstoneFields) {
         super({
             type: ASModelType.Tombstone,

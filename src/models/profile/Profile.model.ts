@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {ProfileFields} from "./Profile.types";
 
@@ -9,7 +9,7 @@ import {ProfileFields} from "./Profile.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Profile Docs}
  */
-export class Profile extends ASBase<ProfileFields>{
+export class Profile extends APBase<ProfileFields>{
     constructor(fields: ProfileFields) {
         super({
             type: ASModelType.Profile,

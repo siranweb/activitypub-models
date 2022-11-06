@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {DocumentFields} from "./Document.types";
 
@@ -7,7 +7,7 @@ import {DocumentFields} from "./Document.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Document Docs}
  */
-export class Document extends ASBase<DocumentFields>{
+export class Document extends APBase<DocumentFields>{
     constructor(fields: DocumentFields) {
         super({
             type: ASModelType.Document,

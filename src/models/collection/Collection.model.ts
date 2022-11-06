@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {CollectionFields} from "./Collection.types";
 
@@ -8,7 +8,7 @@ import {CollectionFields} from "./Collection.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Collection Docs}
  */
-export class Collection extends ASBase<CollectionFields>{
+export class Collection extends APBase<CollectionFields>{
     constructor(fields: CollectionFields) {
         super({
             type: ASModelType.Collection,

@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {ApplicationFields} from "./Application.types";
 
@@ -7,7 +7,7 @@ import {ApplicationFields} from "./Application.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Application Docs}
  */
-export class Application extends ASBase<ApplicationFields>{
+export class Application extends APBase<ApplicationFields>{
     constructor(fields: ApplicationFields) {
         super({
             type: ASModelType.Application,

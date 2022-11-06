@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {AudioFields} from "./Audio.types";
 
@@ -7,7 +7,7 @@ import {AudioFields} from "./Audio.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Audio Docs}
  */
-export class Audio extends ASBase<AudioFields>{
+export class Audio extends APBase<AudioFields>{
     constructor(fields: AudioFields) {
         super({
             type: ASModelType.Audio,

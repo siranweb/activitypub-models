@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {PersonFields} from "./Person.types";
 
@@ -7,7 +7,7 @@ import {PersonFields} from "./Person.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Person Docs}
  */
-export class Person extends ASBase<PersonFields>{
+export class Person extends APBase<PersonFields>{
     constructor(fields: PersonFields) {
         super({
             type: ASModelType.Person,

@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {PageFields} from "./Page.types";
 
@@ -7,7 +7,7 @@ import {PageFields} from "./Page.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Page Docs}
  */
-export class Page extends ASBase<PageFields>{
+export class Page extends APBase<PageFields>{
     constructor(fields: PageFields) {
         super({
             type: ASModelType.Page,

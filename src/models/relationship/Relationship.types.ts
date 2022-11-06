@@ -1,7 +1,7 @@
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {APObjectFields} from "../apObject/APObject.types";
 import {SubjectValue, ObjectValue, RelationshipValue} from "../../common/common.types";
 
-export interface RelationshipFields extends ASObjectFields {
+export interface RelationshipFields extends APObjectFields {
 
     /**
      * On a Relationship object, the subject property identifies one of the connected individuals.

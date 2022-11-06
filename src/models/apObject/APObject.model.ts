@@ -1,5 +1,5 @@
-import {ASBase} from "../asBase/ASBase.model";
-import { ASObjectFields } from "./ASObject.types";
+import {APBase} from "../apBase/APBase.model";
+import { APObjectFields } from "./APObject.types";
 import {ASModelType} from "../../common/common.types";
 
 /**
@@ -9,8 +9,8 @@ import {ASModelType} from "../../common/common.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Object Docs}
  */
-export class ASObject extends ASBase<ASObjectFields>{
-    constructor(fields: ASObjectFields) {
+export class APObject extends APBase<APObjectFields>{
+    constructor(fields: APObjectFields) {
         super({
             type: ASModelType.Object,
             ...fields

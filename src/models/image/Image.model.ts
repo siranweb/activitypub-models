@@ -1,4 +1,4 @@
-import {ASBase} from "../asBase/ASBase.model";
+import {APBase} from "../apBase/APBase.model";
 import {ASModelType} from "../../common/common.types";
 import {ImageFields} from "./Image.types";
 
@@ -7,7 +7,7 @@ import {ImageFields} from "./Image.types";
  *
  * {@link https://www.w3.org/ns/activitystreams#Image Docs}
  */
-export class Image extends ASBase<ImageFields>{
+export class Image extends APBase<ImageFields>{
     constructor(fields: ImageFields) {
         super({
             type: ASModelType.Image,

@@ -1,4 +1,4 @@
-import {ASObjectFields} from "../asObject/ASObject.types";
+import {APObjectFields} from "../apObject/APObject.types";
 import {
     ActorValue,
     InstrumentValue,
@@ -8,7 +8,7 @@ import {
     TargetValue
 } from "../../common/common.types";
 
-export interface ActivityFields extends ASObjectFields {
+export interface ActivityFields extends APObjectFields {
 
     /**
      * Describes one or more entities that either performed or are expected to perform the activity.
