@@ -13,6 +13,7 @@ ActivityPub JS/TS models with official docs. Still in development, not ready for
 
 
 ## Roadmap
+You can check current tasks [here](https://github.com/orgs/activitypub-js/projects/1)
 
  - [x] Implement all ActivityPub/ActivityStreams models
  - [ ] Prepare infrastructure
