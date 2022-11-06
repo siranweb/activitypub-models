@@ -130,3 +130,19 @@ export type SourceValue = {
     content: ContentValue,
     mediaType?: MediaType,
 }
+export type InboxValue = string | OrderedCollection | Link;
+export type OutboxValue = string | OrderedCollection | Link;
+export type FollowingValue = string | Collection | OrderedCollection | Link;
+export type FollowersValue = string | Collection | OrderedCollection | Link;
+export type LikedValue = string | Collection | OrderedCollection | Link;
+export type LikesValue = string | Collection | OrderedCollection | Link;
+export type SharesValue = string | Collection | OrderedCollection | Link;
+export type StreamsValue = string | Collection | OrderedCollection | Link;
+export type PreferredUsernameValue = string;
+export type PreferredUsernameMapValue = Record<string, string>;
+export type ProxyUrlValue = string;
+export type OauthAuthorizationEndpointValue = string;
+export type OauthTokenEndpointValue = string;
+export type ProvideClientKeyValue = string;
+export type SignClientKeyValue = string;
+export type SharedInboxValue = string;

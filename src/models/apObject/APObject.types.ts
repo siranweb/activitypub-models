@@ -28,7 +28,7 @@ import {
     SummaryValue,
     SummaryMapValue,
     UpdatedValue,
-    DurationValue, SourceValue,
+    DurationValue, SourceValue, LikesValue, SharesValue,
 } from "../../common/common.types";
 
 export interface APObjectFields {
@@ -87,7 +87,7 @@ export interface APObjectFields {
      * The content or textual representation of the Object encoded as a JSON string.
      * By default, the value of content is HTML. The mediaType property can be
      * used in the object to indicate a different content type.
-     * [For multiple language-tagged values use contentMap property].
+     * [For multiple language-tagged values use contentMap property]
      *
      * {@link https://www.w3.org/ns/activitystreams#content Docs}
      */
@@ -97,7 +97,7 @@ export interface APObjectFields {
      * The content or textual representation of the Object encoded as a JSON string.
      * By default, the value of content is HTML. The mediaType property can be
      * used in the object to indicate a different content type.
-     * [For a single value use content property].
+     * [For a single value use content property]
      *
      * {@link https://www.w3.org/ns/activitystreams#content Docs}
      */
@@ -341,4 +341,24 @@ export interface APObjectFields {
      * {@link https://www.w3.org/TR/activitypub/#source-property Docs}
      */
     source?: SourceValue;
+
+    /**
+     * Every object MAY have a "likes" collection. This is a list of all Like activities with this object as
+     * the object property, added as a side effect. The likes collection MUST be either an OrderedCollection
+     * or a Collection and MAY be filtered on privileges of an authenticated user or as appropriate when
+     * no authentication is given.
+     *
+     * {@link https://www.w3.org/TR/activitypub/#likes Docs}
+     */
+    likes?: LikesValue;
+
+    /**
+     * Every object MAY have a "shares" collection. This is a list of all Announce activities with this object as
+     * the object property, added as a side effect. The shares collection MUST be either an OrderedCollection
+     * or a Collection and MAY be filtered on privileges of an authenticated user or as appropriate when
+     * no authentication is given.
+     *
+     * {@link https://www.w3.org/TR/activitypub/#shares Docs}
+     */
+    shares?: SharesValue;
 }
