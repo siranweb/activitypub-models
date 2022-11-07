@@ -10,10 +10,10 @@ import {ASModelType} from "../../common/types";
  * {@link https://www.w3.org/ns/activitystreams#Object Docs}
  */
 export class APObject extends APBase<APObjectFields>{
-    constructor(fields: APObjectFields) {
-        super({
+    static create(fields: APObjectFields) {
+        return APBase._create<APObjectFields>({
             type: ASModelType.Object,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

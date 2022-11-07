@@ -10,10 +10,10 @@ import {PlaceFields} from "./Place.types";
  * {@link https://www.w3.org/ns/activitystreams#Place Docs}
  */
 export class Place extends APBase<PlaceFields>{
-    constructor(fields: PlaceFields) {
-        super({
+    static create(fields: PlaceFields) {
+        return APBase._create<PlaceFields>({
             type: ASModelType.Place,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

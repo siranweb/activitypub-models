@@ -8,10 +8,10 @@ import {PageFields} from "./Page.types";
  * {@link https://www.w3.org/ns/activitystreams#Page Docs}
  */
 export class Page extends APBase<PageFields>{
-    constructor(fields: PageFields) {
-        super({
+    static create(fields: PageFields) {
+        return APBase._create<PageFields>({
             type: ASModelType.Page,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

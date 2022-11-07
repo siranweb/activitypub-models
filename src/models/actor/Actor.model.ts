@@ -13,10 +13,10 @@ import {ActorFields} from "./Actor.types";
  * {@link https://www.w3.org/TR/activitypub/#actors Docs}
  */
 export class Actor extends APBase<ActorFields>{
-    constructor(fields: ActorFields) {
-        super({
-            type: ASModelType.Profile,
-            ...fields
-        })
+    static create(fields: ActorFields) {
+        return APBase._create<ActorFields>({
+            type: ASModelType.Actor,
+            ...fields,
+        });
     }
 }

@@ -8,10 +8,10 @@ import {ApplicationFields} from "./Application.types";
  * {@link https://www.w3.org/ns/activitystreams#Application Docs}
  */
 export class Application extends APBase<ApplicationFields>{
-    constructor(fields: ApplicationFields) {
-        super({
+    static create(fields: ApplicationFields) {
+        return APBase._create<ApplicationFields>({
             type: ASModelType.Application,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

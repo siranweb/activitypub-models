@@ -14,10 +14,10 @@ import {QuestionFields} from "./Question.types";
  * {@link https://www.w3.org/ns/activitystreams#Question Docs}
  */
 export class Question extends APBase<QuestionFields>{
-    constructor(fields: QuestionFields) {
-        super({
+    static create(fields: QuestionFields) {
+        return APBase._create<QuestionFields>({
             type: ASModelType.Question,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

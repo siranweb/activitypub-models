@@ -8,10 +8,10 @@ import {CollectionPageFields} from "./CollectionPage.types";
  * {@link https://www.w3.org/ns/activitystreams#CollectionPage Docs}
  */
 export class CollectionPage extends APBase<CollectionPageFields>{
-    constructor(fields: CollectionPageFields) {
-        super({
+    static create(fields: CollectionPageFields) {
+        return APBase._create<CollectionPageFields>({
             type: ASModelType.CollectionPage,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

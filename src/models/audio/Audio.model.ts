@@ -8,10 +8,10 @@ import {AudioFields} from "./Audio.types";
  * {@link https://www.w3.org/ns/activitystreams#Audio Docs}
  */
 export class Audio extends APBase<AudioFields>{
-    constructor(fields: AudioFields) {
-        super({
+    static create(fields: AudioFields) {
+        return APBase._create<AudioFields>({
             type: ASModelType.Audio,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

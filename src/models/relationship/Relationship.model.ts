@@ -11,10 +11,10 @@ import {RelationshipFields} from "./Relationship.types";
  * {@link https://www.w3.org/ns/activitystreams#Relationship Docs}
  */
 export class Relationship extends APBase<RelationshipFields>{
-    constructor(fields: RelationshipFields) {
-        super({
+    static create(fields: RelationshipFields) {
+        return APBase._create<RelationshipFields>({
             type: ASModelType.Relationship,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

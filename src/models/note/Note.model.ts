@@ -8,10 +8,10 @@ import {NoteFields} from "./Note.types";
  * {@link https://www.w3.org/ns/activitystreams#Note Docs}
  */
 export class Note extends APBase<NoteFields>{
-    constructor(fields: NoteFields) {
-        super({
+    static create(fields: NoteFields) {
+        return APBase._create<NoteFields>({
             type: ASModelType.Note,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

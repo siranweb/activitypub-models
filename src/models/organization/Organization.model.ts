@@ -8,10 +8,10 @@ import {OrganizationFields} from "./Organization.types";
  * {@link https://www.w3.org/ns/activitystreams#Organization Docs}
  */
 export class Organization extends APBase<OrganizationFields>{
-    constructor(fields: OrganizationFields) {
-        super({
+    static create(fields: OrganizationFields) {
+        return APBase._create<OrganizationFields>({
             type: ASModelType.Organization,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

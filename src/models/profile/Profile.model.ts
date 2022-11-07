@@ -10,10 +10,10 @@ import {ProfileFields} from "./Profile.types";
  * {@link https://www.w3.org/ns/activitystreams#Profile Docs}
  */
 export class Profile extends APBase<ProfileFields>{
-    constructor(fields: ProfileFields) {
-        super({
+    static create(fields: ProfileFields) {
+        return APBase._create<ProfileFields>({
             type: ASModelType.Profile,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

@@ -13,10 +13,10 @@ import {ASModelType} from "../../common/types";
  * {@link https://www.w3.org/ns/activitystreams#Link Docs}
  */
 export class Link extends APBase<LinkFields>{
-    constructor(fields: LinkFields) {
-        super({
+    static create(fields: LinkFields) {
+        return APBase._create<LinkFields>({
             type: ASModelType.Link,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

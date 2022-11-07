@@ -8,10 +8,10 @@ import {ServiceFields} from "./Service.types";
  * {@link https://www.w3.org/ns/activitystreams#Service Docs}
  */
 export class Service extends APBase<ServiceFields>{
-    constructor(fields: ServiceFields) {
-        super({
+    static create(fields: ServiceFields) {
+        return APBase._create<ServiceFields>({
             type: ASModelType.Service,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }
