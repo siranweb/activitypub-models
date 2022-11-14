@@ -6,20 +6,8 @@ export class APBase<T extends WithContext> {
     public fields: T;
 
     protected constructor(fields: T) {
-        // TODO move ordering to toPlain
-        const obj = cloneObjDeep<T>(fields);
-        if ('@context' in obj) {
-            this.fields = {
-                '@context': obj['@context'],
-            } as T;
-            delete obj["@context"];
-        } else {
-            this.fields = {} as T;
-        }
-
         this.fields = {
-            ...this.fields,
-            ...obj
+            ...cloneObjDeep<T>(fields),
         };
     }
 
@@ -37,12 +25,17 @@ export class APBase<T extends WithContext> {
     }
 
     protected parseValue(value: any): any {
-        return value instanceof APBase ? value.toPlain() : value;
+        return value instanceof APBase ? value.toPlain() : value.toValue();
     }
 
     public toPlain(): Record<string, any> {
         const result = {} as Record<string, any>;
+        if ('@context' in this.fields) {
+            result['@context'] = this.fields['@context'];
+        }
         for (const [key, value] of Object.entries(this.fields)) {
+            if (key === '@context') continue;
+
             const isFunction = typeof value === 'function';
             const isArray = Array.isArray(value);
             const isNull = value === null;
