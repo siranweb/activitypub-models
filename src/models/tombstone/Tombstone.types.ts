@@ -1,4 +1,4 @@
-import {DeletedValue, FormerTypeValue} from "../../common/common.types";
+import {DeletedValue, FormerTypeValue} from "../../common/types";
 import {APObjectFields} from "../apObject/APObject.types";
 
 export interface TombstoneFields extends APObjectFields {

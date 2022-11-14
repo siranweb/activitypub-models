@@ -2,14 +2,14 @@ import {
     HeightValue,
     HreflangValue,
     HrefValue,
-    IdValue,
     MediaTypeValue,
     NameMapValue,
     NameValue, PreviewValue,
     RelValue, TypeValue, WidthValue
-} from "../../common/common.types";
+} from "../../common/types";
 
 export interface LinkFields {
+    '@context': never;
 
     /**
      * Identifies the {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}

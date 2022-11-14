@@ -1,5 +1,5 @@
 import {APBase} from "../apBase/APBase.model";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 import {ArticleFields} from "./Article.types";
 
 /**
@@ -8,10 +8,10 @@ import {ArticleFields} from "./Article.types";
  * {@link https://www.w3.org/ns/activitystreams#Article Docs}
  */
 export class Article extends APBase<ArticleFields>{
-    constructor(fields: ArticleFields) {
-        super({
+    static create(fields: ArticleFields) {
+        return APBase._create<ArticleFields>({
             type: ASModelType.Article,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

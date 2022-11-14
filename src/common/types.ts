@@ -39,6 +39,7 @@ export enum ASModelType {
     Question = 'Question',
     Tombstone = 'Tombstone',
     Profile = 'Profile',
+    Actor = 'Actor',
     Link = 'Link',
     Mention = 'Mention',
     Collection = 'Collection',
@@ -55,6 +56,7 @@ export type LanguageTag = string;
 export type MediaType = string;
 export type Duration = string;
 
+export type ContextValue = string | Record<string, string>;
 export type UrlValue = string | Link;
 export type IdValue = string;
 export type TypeValue = string;
@@ -146,3 +148,13 @@ export type OauthTokenEndpointValue = string;
 export type ProvideClientKeyValue = string;
 export type SignClientKeyValue = string;
 export type SharedInboxValue = string;
+
+export interface WithContext {
+    /**
+     * JSON-LD uses the special @context property to define the processing context.
+     * The value of the @context property is defined by the [JSON-LD] specification.
+     *
+     * {@link https://www.w3.org/TR/activitystreams-core/#jsonld Docs}
+     */
+    '@context'?: ContextValue | ContextValue[];
+}

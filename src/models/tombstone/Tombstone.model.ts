@@ -1,5 +1,5 @@
 import {APBase} from "../apBase/APBase.model";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 import {TombstoneFields} from "./Tombstone.types";
 
 /**
@@ -10,10 +10,10 @@ import {TombstoneFields} from "./Tombstone.types";
  * {@link https://www.w3.org/ns/activitystreams#Tombstone Docs}
  */
 export class Tombstone extends APBase<TombstoneFields>{
-    constructor(fields: TombstoneFields) {
-        super({
+    static create(fields: TombstoneFields) {
+        return APBase._create<TombstoneFields>({
             type: ASModelType.Tombstone,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

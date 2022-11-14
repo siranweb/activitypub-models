@@ -2,7 +2,7 @@ import {
     OrderedCollectionCurrentValue,
     OrderedCollectionFirstValue, OrderedCollectionItemsValue,
     OrderedCollectionLastValue
-} from "../../common/common.types";
+} from "../../common/types";
 import {CollectionFields} from "../collection/Collection.types";
 import {Modify} from "../../common/utils";
 

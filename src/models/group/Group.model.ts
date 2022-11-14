@@ -1,5 +1,5 @@
 import {APBase} from "../apBase/APBase.model";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 import {GroupFields} from "./Group.types";
 
 /**
@@ -8,10 +8,10 @@ import {GroupFields} from "./Group.types";
  * {@link https://www.w3.org/ns/activitystreams#Group Docs}
  */
 export class Group extends APBase<GroupFields>{
-    constructor(fields: GroupFields) {
-        super({
+    static create(fields: GroupFields) {
+        return APBase._create<GroupFields>({
             type: ASModelType.Group,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

@@ -1,5 +1,5 @@
 import {APBase} from "../apBase/APBase.model";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 import {CollectionFields} from "./Collection.types";
 
 /**
@@ -9,10 +9,10 @@ import {CollectionFields} from "./Collection.types";
  * {@link https://www.w3.org/ns/activitystreams#Collection Docs}
  */
 export class Collection extends APBase<CollectionFields>{
-    constructor(fields: CollectionFields) {
-        super({
+    static create(fields: CollectionFields) {
+        return APBase._create<CollectionFields>({
             type: ASModelType.Collection,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

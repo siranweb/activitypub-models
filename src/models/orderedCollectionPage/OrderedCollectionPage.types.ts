@@ -4,7 +4,7 @@ import {
     OrderedCollectionPagePartOfValue,
     OrderedCollectionPagePrevValue,
     StartIndexValue
-} from "../../common/common.types";
+} from "../../common/types";
 import {CollectionPageFields} from "../collectionPage/CollectionPage.types";
 import {Modify} from "../../common/utils";
 

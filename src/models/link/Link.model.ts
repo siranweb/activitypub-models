@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import { LinkFields } from "./Link.types";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 
 /**
  * A Link is an indirect, qualified reference to a resource identified by a URL.
@@ -13,10 +13,10 @@ import {ASModelType} from "../../common/common.types";
  * {@link https://www.w3.org/ns/activitystreams#Link Docs}
  */
 export class Link extends APBase<LinkFields>{
-    constructor(fields: LinkFields) {
-        super({
+    static create(fields: LinkFields) {
+        return APBase._create<LinkFields>({
             type: ASModelType.Link,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

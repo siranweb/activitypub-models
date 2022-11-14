@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import {IntransitiveActivityFields} from './IntransitiveActivity.types';
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 
 /**
  * Instances of intransitiveActivity are a subtype of
@@ -10,10 +10,10 @@ import {ASModelType} from "../../common/common.types";
  * {@link https://www.w3.org/ns/activitystreams#IntransitiveActivity Docs}
  */
 export class IntransitiveActivity extends APBase<IntransitiveActivityFields>{
-    constructor(fields: IntransitiveActivityFields) {
-        super({
+    static create(fields: IntransitiveActivityFields) {
+        return APBase._create<IntransitiveActivityFields>({
             type: ASModelType.Activity,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

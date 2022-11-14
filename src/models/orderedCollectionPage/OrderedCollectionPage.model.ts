@@ -1,5 +1,5 @@
 import {APBase} from "../apBase/APBase.model";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 import {OrderedCollectionPageFields} from "./OrderedCollectionPage.types";
 
 /**
@@ -8,10 +8,10 @@ import {OrderedCollectionPageFields} from "./OrderedCollectionPage.types";
  * {@link https://www.w3.org/ns/activitystreams#OrderedCollectionPage Docs}
  */
 export class OrderedCollectionPage extends APBase<OrderedCollectionPageFields>{
-    constructor(fields: OrderedCollectionPageFields) {
-        super({
+    static create(fields: OrderedCollectionPageFields) {
+        return APBase._create<OrderedCollectionPageFields>({
             type: ASModelType.OrderedCollectionPage,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

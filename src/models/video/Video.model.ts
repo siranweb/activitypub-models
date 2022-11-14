@@ -1,5 +1,5 @@
 import {APBase} from "../apBase/APBase.model";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 import {VideoFields} from "./Video.types";
 
 /**
@@ -8,10 +8,10 @@ import {VideoFields} from "./Video.types";
  * {@link https://www.w3.org/ns/activitystreams#Video Docs}
  */
 export class Video extends APBase<VideoFields>{
-    constructor(fields: VideoFields) {
-        super({
+    static create(fields: VideoFields) {
+        return APBase._create<VideoFields>({
             type: ASModelType.Video,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

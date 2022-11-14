@@ -1,6 +1,6 @@
 import {APBase} from "../apBase/APBase.model";
 import { ActivityFields } from "./Activity.types";
-import {ASModelType} from "../../common/common.types";
+import {ASModelType} from "../../common/types";
 
 /**
  * An Activity is a subtype of Object that describes some form of action that may happen,
@@ -11,10 +11,10 @@ import {ASModelType} from "../../common/common.types";
  * {@link https://www.w3.org/ns/activitystreams#Activity Docs}
  */
 export class Activity extends APBase<ActivityFields>{
-    constructor(fields: ActivityFields) {
-        super({
+    static create(fields: ActivityFields) {
+        return APBase._create<ActivityFields>({
             type: ASModelType.Activity,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }

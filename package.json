@@ -7,8 +7,8 @@
   "scripts": {
     "tsc": "tsc -p ./tsconfig.json",
     "tsc:watch": "tsc -w -p ./tsconfig.json",
-    "start": "node --es-module-specifier-resolution=node build/index.js",
-    "start:dev": "nodemon --es-module-specifier-resolution=node build/index.js"
+    "start": "node --es-module-specifier-resolution=node dist/index.js",
+    "start:dev": "nodemon --es-module-specifier-resolution=node dist/index.js"
   },
   "files": [
     "dist"

@@ -28,10 +28,10 @@ import {
     SummaryValue,
     SummaryMapValue,
     UpdatedValue,
-    DurationValue, SourceValue, LikesValue, SharesValue,
-} from "../../common/common.types";
+    DurationValue, SourceValue, LikesValue, SharesValue, ContextValue, WithContext,
+} from "../../common/types";
 
-export interface APObjectFields {
+export interface APObjectFields extends WithContext {
     /**
      * Provides the globally unique identifier for
      * an {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}

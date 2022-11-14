@@ -6,7 +6,7 @@ import {
     LongitudeValue,
     RadiusValue,
     UnitsValue
-} from "../../common/common.types";
+} from "../../common/types";
 
 
 export interface PlaceFields extends APObjectFields {
