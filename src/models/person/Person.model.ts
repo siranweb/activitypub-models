@@ -8,10 +8,10 @@ import {PersonFields} from "./Person.types";
  * {@link https://www.w3.org/ns/activitystreams#Person Docs}
  */
 export class Person extends APBase<PersonFields>{
-    constructor(fields: PersonFields) {
-        super({
+    static create(fields: PersonFields) {
+        return APBase._create<PersonFields>({
             type: ASModelType.Person,
-            ...fields
-        })
+            ...fields,
+        });
     }
 }
