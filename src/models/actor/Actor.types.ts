@@ -146,8 +146,6 @@ export interface ActorFields extends APObjectFields {
      */
     streams?: StreamsValue | StreamsValue[];
 
-    // TODO preferredUsername or preferredUsernameMap at one time
-
     /**
      * A short username which may be used to refer to the actor, with no uniqueness guarantees.
      * [For multiple language-tagged values use preferredUsernameMap property]

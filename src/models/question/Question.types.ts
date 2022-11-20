@@ -3,7 +3,6 @@ import {AnyOfValue, ClosedValue, OneOfValue} from "../../common/types";
 
 export interface QuestionFields extends IntransitiveActivityFields {
 
-    // TODO: only oneOf or anyOf at one time
     /**
      * Identifies an exclusive option for a Question.
      * Use of oneOf implies that the Question can have only a single answer.

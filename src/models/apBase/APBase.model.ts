@@ -25,7 +25,7 @@ export class APBase<T extends WithContext> {
     }
 
     protected parseValue(value: any): any {
-        return value instanceof APBase ? value.toPlain() : value.toValue();
+        return value instanceof APBase ? value.toPlain() : value.valueOf();
     }
 
     public toPlain(): Record<string, any> {
