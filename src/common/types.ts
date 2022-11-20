@@ -51,7 +51,7 @@ export enum ASModelType {
 export type AnyCollection = Collection | OrderedCollection;
 export type AnyASObject = APObject | Article | Audio | Document | APEvent | Image | Note | Page | Place | Profile | Relationship | Tombstone | Video | AnyCollection;
 
-export type DateTime = string;
+export type DateTime = string | Date;
 export type LanguageTag = string;
 export type MediaType = string;
 export type Duration = string;
