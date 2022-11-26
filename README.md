@@ -19,11 +19,12 @@ Extendable ActivityPub JS/TS models with official docs
 
 ## Docs
 
-Installation:
+Install with npm:
 ```
-# with npm
 npm i activitypub-models
-# with yarn
+```
+Install with yarn:
+```
 yarn add activitypub-models
 ```
 
@@ -72,17 +73,19 @@ const customNote = CustomNote.create({
 });
 ```
 
-Creating own models with JavaScript:
-```javascript
-import { NoteFields, APBase, ASModelType } from 'activitypub-models';
+You also can create models with plain JS, but you will lose types. Can be fixed with .d.ts and jsdoc:
+```typescript
+// CustomNote.d.ts
+import { APBase, NoteFields, WithContext } from "activitypub-models";
+export interface CustomNotesFields extends NoteFields {
+    myField: string | string[];
+}
+export type CustomNoteType = APBase<CustomNotesFields> & CustomNotesFields & WithContext;
 
-/**
- * @typedef {Object} CustomNoteFields
- * @property {string | string[]} myField
- */
+// CustomNote.js
+import {APBase, ASModelType} from "activitypub-models";
 
 class CustomNote extends APBase {
-    /** @param {NoteFields & CustomNoteFields} fields */
     static create(fields) {
         return APBase._create({
             type: ASModelType.Note,
@@ -91,6 +94,7 @@ class CustomNote extends APBase {
     }
 }
 
+/** @type {CustomNoteType} */
 const customNote = CustomNote.create({
     myField: 'I am a new field!'
 });
