@@ -12,8 +12,8 @@
     "LICENSE",
     "README.md"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "SiranWeb <kirillg.web@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "typescript": "^4.8.4"
   }
