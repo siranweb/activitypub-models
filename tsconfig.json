@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "declaration": true,
     "target": "es2017",
-    "module": "ES6",
+    "module": "commonjs",
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

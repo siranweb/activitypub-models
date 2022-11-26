@@ -1,17 +1,17 @@
 {
-  "name": "activitypub-js-models",
-  "version": "1.0.0",
-  "description": "",
+  "name": "activitypub-models",
+  "version": "0.0.1",
+  "description": "ActivityPub Models JS/TS implementation",
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
     "tsc": "tsc -p ./tsconfig.json",
-    "tsc:watch": "tsc -w -p ./tsconfig.json",
-    "start": "node --es-module-specifier-resolution=node dist/index.js",
-    "start:dev": "nodemon --es-module-specifier-resolution=node dist/index.js"
+    "tsc:watch": "tsc -w -p ./tsconfig.json"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "author": "",
   "license": "ISC",
