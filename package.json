@@ -1,6 +1,6 @@
 {
   "name": "activitypub-models",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ActivityPub Models JS/TS implementation",
   "main": "./dist/index.js",
   "scripts": {
