@@ -9,7 +9,7 @@ import {
 } from "../../common/types";
 
 export interface LinkFields {
-    '@context': never;
+    '@context'?: never;
 
     /**
      * Identifies the {@link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object Object}
