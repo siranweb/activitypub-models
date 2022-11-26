@@ -7,6 +7,9 @@
     "tsc": "tsc -p ./tsconfig.json",
     "tsc:watch": "tsc -w -p ./tsconfig.json"
   },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
   "files": [
     "dist",
     "LICENSE",
@@ -14,7 +17,8 @@
   ],
   "author": "SiranWeb <kirillg.web@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "typescript": "^4.8.4"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/activitypub-js/activitypub-models.git"
   }
 }
